@@ -1,0 +1,38 @@
+#A person invests $1000 in a savings acount yielding 5% interest. 
+#Assuming that the person leaves all interest on deposit in the account, calculate and display the amount of money in the account at the end of eac year for 10 years. 
+#Use the following formula for determining these amounts:
+#a = p(1+r)^n
+#where p is the original amount invested; r is the annual interest rate; n is the number of years; a is the amount on deposit at the end of each year
+
+from decimal import Decimal
+
+principal = Decimal('1000.00')
+
+print(principal)
+
+rate = Decimal('0.05')
+
+print(rate)
+
+x = Decimal('10.5')
+
+y= Decimal('2')
+
+x + y
+print(x+y)
+
+x//y
+print(x//y)
+
+x+=y
+
+x
+print(x)
+
+for year in range(1, 11):
+    amount = principal * (1 + rate) ** year
+    print(f'{year:>2}{amount:>10.2f}')
+
+#The (1 + r)^n is represented as (1 + rate) ** year
+# print(f'{year:>2}{amount:>10.2f}') uses an f string with two placeholders to format the loop's output
+# the placeholder {year:>2} uses the format specifier to indicate that year's value should be right aligned (symbolized by >) in a field of width 2
